@@ -28,7 +28,7 @@ install.packages(c("optparse", "gtools", "pheatmap"))
 or with a conda environment
 
 ```bash
-conda create -n chr_pairing -c conda-forge r-base r-optparse r-data.table r-ggplot2
+conda create -n chr_pairing -c conda-forge r-base r-optparse r-data.table r-ggplot2 r-gtools
 
 conda activate chr_pairing
 ```
