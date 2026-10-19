@@ -25,7 +25,13 @@ R ≥ 4.0 with:
 ```r
 install.packages(c("optparse", "gtools", "pheatmap"))
 ```
+or with a conda environment
 
+```bash
+conda create -n chr_pairing -c conda-forge r-base r-optparse r-data.table r-ggplot2
+
+conda activate chr_pairing
+```
 ## Input
 
 The `full_table.tsv` produced by BUSCO in genome mode, found in the run directory as `run_<lineage>/full_table.tsv`. Only the first three columns are used: BUSCO id, status, and sequence name.
@@ -59,13 +65,13 @@ renamed them, `.` to keep everything.
 Chromosomes named `SUPER_1` … `SUPER_18`:
 
 ```bash
-Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing
+Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o chr_pairing
 ```
 
 Chromosomes renamed to `chr1` … `chr18`:
 
 ```bash
-Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing -r "^chr"
+Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o chr_pairing -r "^chr"
 ```
 
 ## Output
