@@ -39,7 +39,7 @@ busco -i assembly.fa -l eudicots_odb10 -m genome -c 16 -o busco_out
 ## Usage
 
 ```bash
-Rscript presubphaser.r --input full_table.tsv --output PREFIX [--chrom_regex REGEX]
+Rscript chr_pairing.r --input full_table.tsv --output PREFIX [--chrom_regex REGEX]
 ```
 
 ## Arguments
@@ -59,13 +59,13 @@ renamed them, `.` to keep everything.
 Chromosomes named `SUPER_1` … `SUPER_18`:
 
 ```bash
-Rscript presubphaser.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing
+Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing
 ```
 
 Chromosomes renamed to `chr1` … `chr18`:
 
 ```bash
-Rscript presubphaser.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing -r "^chr"
+Rscript chr_pairing.r -i run_eudicots_odb10/full_table.tsv -o hom_pairing -r "^chr"
 ```
 
 ## Output
