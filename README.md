@@ -1,4 +1,4 @@
-# presubphaser
+# chr_pairing
 
 Homeologue pairing via shared single-copy BUSCO genes.
 
